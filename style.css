@@ -77,6 +77,12 @@ body {
     box-shadow: 0 0 0 3px rgba(95, 114, 101, 0.3); /* substituído */
 }
 
+/* Alinhamento específico para select */
+select.input-box {
+    text-align: left;
+    text-align-last: left;
+}
+
 .main-button {
     width: 100%;
     background-color: #3A453D; /* substituído */

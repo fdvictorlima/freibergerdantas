@@ -45,22 +45,28 @@
       </div>
 
       <form id="situacaoForm" class="space-y-6">
-        <select id="situacao" name="situacao" class="input-box" required>
-        <option value="" disabled selected>Selecione uma opção</option>
-
-        <optgroup label="PREVIDENCIÁRIO">
-            <option value="Aposentadoria por Invalidez">Aposentadoria por invalidez</option>
-            <option value="Aposentadoria por Tempo de Serviço">Aposentadoria por tempo de serviço</option>
-            <option value="Benefício Assistencial - LOAS">Benefício Assistencial - LOAS</option>
-            <option value="Pensão por Invalidez">Pensão por Invalidez</option>
-            <option value="Pensão por Morte">Pensão por Morte</option>
-        </optgroup>
-
-        <optgroup label="Cível/Outros">
-            <option value="Outros">Outros</option>
-        </optgroup>
+        <select id="area" name="area" class="input-box" required>
+          <option value="" disabled selected>Selecione a área</option>
+          <option value="previdenciario">Previdenciário</option>
+          <option value="civel">Cível</option>
+          <option value="trabalhista">Trabalhista</option>
+          <option value="outros">Outros</option>
         </select>
 
+        <div id="subtipoContainer" class="hidden">
+          <select id="situacao" name="situacao" class="input-box">
+            <option value="" disabled selected>Selecione o tipo</option>
+            <option value="Aposentadoria por Invalidez">Aposentadoria por invalidez</option>
+            <option value="Aposentadoria por Tempo de Serviço">Aposentadoria por tempo de serviço</option>
+            <option value="Aposentadoria por Idade">Aposentadoria por idade</option>
+            <option value="BPC - LOAS">BPC - LOAS</option>
+            <option value="Pensão por Invalidez">Pensão por Invalidez</option>
+            <option value="Pensão por Morte">Pensão por Morte</option>
+            <option value="Salário Maternidade">Salário Maternidade</option>
+            <option value="Auxílio Reclusão">Auxílio Reclusão</option>
+            <option value="Auxílio Doença">Auxílio-doença / Auxílio por incapacidade temporária</option>
+          </select>
+        </div>
 
         <div id="outrosInputContainer" class="hidden space-y-2 text-left">
           <label for="outrosInput" class="form-label">Descreva sua situação:</label>
@@ -97,18 +103,18 @@
       <div class="message-container">
         <h2 class="message-title">Sua solicitação foi enviada!</h2>
         <p class="message-text">
-            Aguarde: um de nossos advogados irá entrar em contato.
+          Aguarde: um de nossos advogados irá entrar em contato.
         </p>
         <p class="message-text">
           Nosso escritório está situado na <b>Avenida Coronel Estevam (Avenida 9)</b>, nº 3467, Nossa Sra. de Nazaré, Natal/RN, próximo ao INSS.
         </p>
         <div class="mt-4">
-  <a href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Coronel+Estevam+3467,+Natal,+RN"
-     target="_blank"
-     class="main-button inline-block text-center">
-     📍 Ver rota no Google Maps
-  </a>
-</div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Coronel+Estevam+3467,+Natal,+RN"
+             target="_blank"
+             class="main-button inline-block text-center">
+             📍 Ver rota no Google Maps
+          </a>
+        </div>
         <p class="thank-you-text">Obrigado!</p>
       </div>
 
@@ -121,6 +127,5 @@
   </div>
 
   <script src="./script.js"></script>
-
 </body>
 </html>
