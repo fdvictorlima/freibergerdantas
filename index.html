@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freiberger Dantas | Advogados e Associados</title>
+  <link rel="icon" href="./assets/icon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="screen-container">
+    <!-- TELA 1: Boas-vindas -->
+    <div id="welcomeScreen">
+      <div class="mb-10 text-center">
+        <img src="logo1.png" alt="Logo Freiberger Dantas" width="270" height="180" class="mx-auto mb-4" />
+      </div>
+
+      <div class="message-container">
+        <p class="title">Olá, tudo bem?</p>
+        <p class="subtitle">
+          Somos o escritório <b>Freiberger Dantas</b>, escritório de advocacia, e vamos buscar te ajudar por aqui. Não se preocupe, estaremos à disposição para sanarmos quaisquer dúvidas.
+        </p>
+      </div>
+
+      <form id="welcomeForm" class="space-y-6">
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" class="input-box" required />
+        <button type="submit" class="main-button">Avançar</button>
+      </form>
+    </div>
+
+    <!-- TELA 2: Situação Jurídica -->
+    <div id="situacaoScreen" class="hidden">
+      <div class="mb-10 text-center">
+        <img src="logo1.png" alt="Logo Freiberger Dantas" width="270" height="180" class="mx-auto mb-4" />
+      </div>
+
+      <div class="message-container">
+        <p class="title">Fale-nos um pouco para que possamos te ajudar.</p>
+        <p class="subtitle">
+          Em que área jurídica você precisa da nossa ajuda? Escolha uma das opções abaixo para que possamos entender melhor a sua situação.
+        </p>
+      </div>
+
+      <form id="situacaoForm" class="space-y-6">
+        <select id="situacao" name="situacao" class="input-box" required>
+        <option value="" disabled selected>Selecione uma opção</option>
+
+        <optgroup label="PREVIDENCIÁRIO">
+            <option value="Aposentadoria por Invalidez">Aposentadoria por invalidez</option>
+            <option value="Aposentadoria por Tempo de Serviço">Aposentadoria por tempo de serviço</option>
+            <option value="Benefício Assistencial - LOAS">Benefício Assistencial - LOAS</option>
+            <option value="Pensão por Invalidez">Pensão por Invalidez</option>
+            <option value="Pensão por Morte">Pensão por Morte</option>
+        </optgroup>
+
+        <optgroup label="OUTROS SERVIÇOS">
+            <option value="Outros">Outros</option>
+        </optgroup>
+        </select>
+
+
+        <div id="outrosInputContainer" class="hidden space-y-2 text-left">
+          <label for="outrosInput" class="form-label">Descreva sua situação:</label>
+          <textarea id="outrosInput" name="outrosInput" rows="4" placeholder="Descreva brevemente a sua situação" class="input-box text-left"></textarea>
+        </div>
+
+        <button type="submit" class="main-button">Avançar</button>
+      </form>
+    </div>
+
+    <!-- TELA 3: Contato -->
+    <div id="contatoScreen" class="hidden">
+      <div class="mb-10 text-center">
+        <img src="logo1.png" alt="Logo Freiberger Dantas" width="270" height="180" class="mx-auto mb-4" />
+      </div>
+
+      <div class="message-container">
+        <p class="title">Para que possamos te ajudar e mantermos contato,</p>
+        <p class="subtitle">Deixe-nos seu número de telefone, preferencialmente seu WhatsApp.</p>
+      </div>
+
+      <form id="contatoForm" class="space-y-6">
+        <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone ou WhatsApp aqui" class="input-box" required />
+        <button type="submit" class="main-button">Avançar</button>
+      </form>
+    </div>
+
+    <!-- TELA 4: Agradecimento -->
+    <div id="thankYouScreen" class="hidden text-center">
+      <div class="mb-10">
+        <img src="logo1.png" alt="Logo Freiberger Dantas" width="270" height="180" class="mx-auto mb-4" />
+      </div>
+
+      <div class="message-container">
+        <h2 class="message-title">Sua solicitação foi enviada!</h2>
+        <p class="message-text">
+            Aguarde: um de nossos advogados irá entrar em contato.
+        </p>
+        <p class="message-text">
+          Nosso escritório está situado na <b>Avenida Coronel Estevam (Avenida 9)</b>, nº 3467, Nossa Sra. de Nazaré, Natal/RN, próximo ao INSS.
+        </p>
+        <div class="mt-4">
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Coronel+Estevam+3467,+Natal,+RN"
+     target="_blank"
+     class="main-button inline-block text-center">
+     📍 Ver rota no Google Maps
+  </a>
+</div>
+        <p class="thank-you-text">Obrigado!</p>
+      </div>
+
+      <button id="restartBtn" class="main-button mt-6">Voltar ao Início</button>
+    </div>
+  </div>
+
+  <div id="loadingSpinner" class="hidden-spinner">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
